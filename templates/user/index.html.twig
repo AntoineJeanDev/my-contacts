@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} My Contacts {% endblock %}
+
+{% block body %}
+<style>
+
+</style>
+
+{% if user %}
+  <div class="row text-center mt-5 mb-5">
+    <div class="col-12">
+      <h1>Welcome {{ user.getFirstName|capitalize }}</h1>
+    </div>
+    <div class="col-12">
+
+      <a href="/user/disconnect" class="btn btn-danger">Disconnect</a>
+    </div>
+  </div>
+
+  {% if user.contacts %}
+    <div class="row">
+      <h2>Contact List</h2>
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Adress</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Email</th>
+          </tr>
+          </thead>
+          <tbody>
+            {% for c in user.contacts %}
+              <tr>
+                <td>{{ c.FirstName }}</td>
+                <td>{{ c.LastName }}</td>
+                <td>{{ c.Adress }}</td>
+                <td>{{ c.Phone }}</td>
+                <td>{{ c.Email }}</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+      </table>
+    </div>
+  {% endif %}  
+
+{% endif %}
+
+{% endblock %}
