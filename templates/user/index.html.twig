@@ -8,13 +8,18 @@
 </style>
 
 {% if user %}
-  <div class="row text-center mt-5 mb-5">
+  <div class="row text-center mt-5 mb-3">
     <div class="col-12">
-      <h1>Welcome {{ user.getFirstName|capitalize }}</h1>
+      <h1>Welcome {{ user.FirstName|capitalize }}</h1>
+    </div>
+    <div class="col-12 mb-5">
+      <div class="btn-group" role="group" aria-label="User Actions">  
+        <a href="/user/edit" class="btn btn-warning">Edit infos</a>
+        <a href="/user/disconnect" class="btn btn-danger">Disconnect</a>
+      </div>
     </div>
     <div class="col-12">
-
-      <a href="/user/disconnect" class="btn btn-danger">Disconnect</a>
+      <a href="/contact/create" class="btn btn-success">Add contact</a>
     </div>
   </div>
 
@@ -29,6 +34,7 @@
             <th scope="col">Adress</th>
             <th scope="col">Phone</th>
             <th scope="col">Email</th>
+            <th scope="col">Actions</th>
           </tr>
           </thead>
           <tbody>
@@ -39,6 +45,10 @@
                 <td>{{ c.Adress }}</td>
                 <td>{{ c.Phone }}</td>
                 <td>{{ c.Email }}</td>
+                <td>
+                  <a href="/contact/{{c.Id}}" class="btn btn-primary btn-sm"><i class="far fa-eye"></i></a>
+                  <a href="/contact/delete/{{c.Id}}" class="btn btn-danger btn-sm"><i class="fas fa-times"></i></a>
+                </td>
               </tr>
             {% endfor %}
           </tbody>

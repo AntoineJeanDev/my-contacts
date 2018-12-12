@@ -17,7 +17,7 @@ class FormLogin extends AbstractType
   {
     $loginBuilder
       ->add('email', TextType::class, array(
-        'required' => true
+        'required' => true,
       ))
       ->add('save', SubmitType::class, array('label' => 'Login'))
       ;

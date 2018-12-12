@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit User Infos{% endblock %}
+
+{% block body %}
+<style>
+
+</style>
+
+<div class="row">
+    <div class="col-12 text-center mb-2">
+        <h1>Edit user infos</h1>
+    </div>
+    <div class="col-12 text-center mb-3">
+        <a href="/user" class="btn btn-primary">Back</a>
+    </div>
+</div>
+
+<div class="row text-center">
+  {% if form_edit %}
+    <div class="col-6 offset-3">
+      {{ form_start(form_edit) }}
+      {{ form_widget(form_edit) }}
+      {{ form_end(form_edit) }}
+    </div>
+  {% endif %}
+</div>
+
+{% endblock %}

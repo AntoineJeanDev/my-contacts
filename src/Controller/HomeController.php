@@ -45,7 +45,7 @@ class HomeController extends AbstractController
                 $user = $form_register->getData();
                 
                 $entityManager = $this->getDoctrine()->getManager();
-                $entityManager->persist($user_register);
+                $entityManager->persist($user);
                 $entityManager->flush();
 
                 echo "<script>console.log('user created');</script>";
@@ -66,7 +66,6 @@ class HomeController extends AbstractController
 
                 if ($user_logged) {
                     $session->set('activeSession', 'true');
-                    $session->set('id', $user_logged->getId());
                     $session->set('user', $user_logged);
                     echo "<script>console.log('user logged in');</script>";
                     return $this->redirectToRoute('user');

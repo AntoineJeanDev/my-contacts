@@ -4,8 +4,6 @@
 
 {% block body %}
 <style>
-    .form_login, .form_register {
-    }
 </style>
 
 <div class="row">
@@ -34,12 +32,12 @@
     {% endif %}
 </div>
 
-{% if app.request.hasPreviousSession %}
+{# {% if app.request.hasPreviousSession %}
     {% for message in app.flashes('notice') %}
         <div class="flash-notice">
             {{ message }}
         </div>
     {% endfor %}
-{% endif %}
+{% endif %} #}
 
 {% endblock %}

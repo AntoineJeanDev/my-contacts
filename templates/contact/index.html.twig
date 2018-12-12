@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Show contact{% endblock %}
+
+{% block body %}
+<style>
+
+</style>
+
+<div class="row">
+    <div class="col-12 text-center mb-2">
+        <h1>Show contact</h1>
+    </div>
+    <div class="col-12 text-center mb-3">
+        <a href="/user" class="btn btn-primary">Back</a>
+    </div>
+</div>
+
+{% if contact %}
+    <div class="row">
+        <div class="col">
+            <ul class="list-group">
+                <li class="list-group-item">First Name : {{ contact.FirstName|capitalize }}</li>
+                <li class="list-group-item">Last Name : {{ contact.LastName|upper }}</li>
+                <li class="list-group-item">Adress : {{ contact.Adress }}</li>
+                <li class="list-group-item">Phone : {{ contact.Phone }}</li>
+                <li class="list-group-item">E-mail : {{ contact.Email }}</li>
+            </ul>
+        </div>
+    </div>
+{% else %}
+    <div class="row">
+        <div class="col">
+            No contact found
+        </div>
+    </div>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Create contact{% endblock %}
+
+{% block body %}
+<style>
+
+</style>
+
+<div class="row">
+    <div class="col-12 text-center mb-2">
+        <h1>Create contact</h1>
+    </div>
+    <div class="col-12 text-center mb-3">
+        <a href="/user" class="btn btn-primary">Back</a>
+    </div>
+</div>
+
+<div class="row text-center">
+  {% if form_create %}
+    <div class="col">
+      {{ form_start(form_create) }}
+      {{ form_widget(form_create) }}
+      {{ form_end(form_create) }}
+    </div>
+  {% endif %}
+</div>
+
+{% endblock %}
