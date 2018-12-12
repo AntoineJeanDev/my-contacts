@@ -8,7 +8,7 @@ login BDD : root / root
 
 J'ai passé beaucoup de temps dessus (plus de la moitié du temps total). J'ai testé plusieurs systèmes sans résultat.
 J'ai rencontré de nombreux problème à cause des mes relations BDD et le serializer n'aimait pas trop ça. 
-Du à un manque de connaissances, je n'ai pas réussi à résoudre le problème.
+Dû à un manque de connaissances, je n'ai pas réussi à résoudre le problème.
 
 De plus Symfony est encore assez nouveau pour moi, il se peut que je n'ai pas utilisé les meilleurs pratiques lors de la réalisation de ce projet.
 
