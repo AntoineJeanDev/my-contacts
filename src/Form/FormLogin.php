@@ -19,7 +19,9 @@ class FormLogin extends AbstractType
       ->add('email', TextType::class, array(
         'required' => true,
       ))
-      ->add('save', SubmitType::class, array('label' => 'Login'))
+      ->add('save', SubmitType::class, array(
+        'label' => 'Login',
+        'attr' => array('class' => 'btn-block btn-primary'),))
       ;
     }
     

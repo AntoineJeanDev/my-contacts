@@ -8,18 +8,30 @@
 </style>
 
 {% if user %}
-  <div class="row text-center mt-5 mb-3">
-    <div class="col-12">
+  <div class="row text-center mt-3 mb-4 ">
+    <div class="col-12 mb-2">
       <h1>Welcome {{ user.FirstName|capitalize }}</h1>
     </div>
-    <div class="col-12 mb-5">
-      <div class="btn-group" role="group" aria-label="User Actions">  
+    <div class="col-12 mb-3">
+      <div class="btn-group" role="group" aria-label="User Actions">
+        <a class="btn btn-primary" data-toggle="collapse" href="#collapseInfos" role="button" aria-expanded="false" aria-controls="collapseInfos">Show infos</a> 
         <a href="/user/edit" class="btn btn-warning">Edit infos</a>
         <a href="/user/disconnect" class="btn btn-danger">Disconnect</a>
       </div>
     </div>
+    <div class="collapse col-12 mb-3" id="collapseInfos">
+      <div class="card card-body align-items-center">
+        <ul class="list-group list-group-flush align-items-start">
+          <li class="list-group-item"><strong>First Name:</strong> {{ user.FirstName|capitalize }}</li>
+          <li class="list-group-item"><strong>Last Name:</strong> {{ user.LastName|capitalize }}</li>
+          <li class="list-group-item"><strong>Adress:</strong> {{ user.Adress|capitalize }}</li>
+          <li class="list-group-item"><strong>Phone:</strong> {{ user.Phone }}</li>
+          <li class="list-group-item"><strong>Email:</strong> {{ user.Email }}</li>
+        </ul>
+      </div>
+    </div>
     <div class="col-12">
-      <a href="/contact/create" class="btn btn-success">Add contact</a>
+      <a href="/contact/create" class="btn btn-success"><i class="fas fa-plus"></i> Add contact</a>
     </div>
   </div>
 

@@ -32,7 +32,9 @@ class FormEditUser extends AbstractType
   ->add('email', TextType::class, array(
       'required' => true
   ))
-  ->add('save', SubmitType::class, array('label' => 'Save infos'))
+  ->add('save', SubmitType::class, array(
+    'label' => 'Save infos',
+    'attr' => array('class' => 'btn-block btn-primary'),))
       ;
     }
     

@@ -32,7 +32,9 @@ class FormRegister extends AbstractType
   ->add('email', TextType::class, array(
       'required' => true
   ))
-  ->add('save', SubmitType::class, array('label' => 'Register'))
+  ->add('save', SubmitType::class, array(
+      'label' => 'Register',
+      'attr' => array('class' => 'btn-block btn-primary'),))
       ;
     }
     

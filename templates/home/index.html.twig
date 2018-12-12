@@ -19,6 +19,12 @@
             {{ form_start(form_login) }}
             {{ form_widget(form_login) }}
             {{ form_end(form_login) }}
+
+            {% if message %}
+                <div class="alert alert-danger" role="alert">
+                    {{ message }}
+                </div>
+            {% endif %}
         </div>
     {% endif %}
 

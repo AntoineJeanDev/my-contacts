@@ -10,7 +10,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 
 use App\Entity\User;
-use App\Entity\Contacts;
+use App\Entity\Contact;
 
 use App\Form\FormEditUser;
 
@@ -76,7 +76,7 @@ class UserController extends AbstractController
                 $user->setAdress($user_temp->getAdress());
                 $user->setPhone($user_temp->getPhone());
                 $user->setEmail($user_temp->getEmail());
-                
+
                 $entityManager = $this->getDoctrine()->getManager();
                 $entityManager->flush();
 

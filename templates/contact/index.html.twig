@@ -18,14 +18,16 @@
 
 {% if contact %}
     <div class="row">
-        <div class="col">
-            <ul class="list-group">
-                <li class="list-group-item">First Name : {{ contact.FirstName|capitalize }}</li>
-                <li class="list-group-item">Last Name : {{ contact.LastName|upper }}</li>
-                <li class="list-group-item">Adress : {{ contact.Adress }}</li>
-                <li class="list-group-item">Phone : {{ contact.Phone }}</li>
-                <li class="list-group-item">E-mail : {{ contact.Email }}</li>
-            </ul>
+        <div class="col-12 align-items-center">
+            <div class="card card-body align-items-center">
+                <ul class="list-group list-group-flush align-items-start">
+                    <li class="list-group-item"><strong>First Name:</strong> {{ contact.FirstName|capitalize }}</li>
+                    <li class="list-group-item"><strong>Last Name:</strong> {{ contact.LastName|upper }}</li>
+                    <li class="list-group-item"><strong>Adress:</strong> {{ contact.Adress }}</li>
+                    <li class="list-group-item"><strong>Phone:</strong> {{ contact.Phone }}</li>
+                    <li class="list-group-item"><strong>E-mail:</strong> {{ contact.Email }}</li>
+                </ul>
+            </div>
         </div>
     </div>
 {% else %}

@@ -59,7 +59,7 @@ class ContactController extends AbstractController
     }
     
     /**
-     * @Route("/contact/{id}", name="contact_show")
+     * @Route("/contact/{id}", name="contact_show", requirements={"id"="\d+"})
      */
     public function index(SessionInterface $session, $id)
     {
@@ -82,7 +82,7 @@ class ContactController extends AbstractController
 
 
     /**
-     * @Route("/contact/delete/{id}", name="contact_delete")
+     * @Route("/contact/delete/{id}", name="contact_delete", requirements={"id"="\d+"})
      */
     public function deleteContact(SessionInterface $session, $id)
     {
