@@ -16,7 +16,7 @@ De plus Symfony est encore assez nouveau pour moi, il se peut que je n'ai pas ut
 
 Sinon tout le reste y est.
 
-A noter que les contacts ne sont pas des membres du site. Je n'ai pas très bien compris le sujet. Quand j'ai vu l'import/export je me suis dit que cela poserait problème (à tort ?). Chaque utiliseur a donc ses propres contacts.
+A noter que les contacts ne sont pas des membres du site. Je n'ai pas très bien compris le sujet. Quand j'ai vu l'import/export je me suis dit que cela poserait problème (à tort ?). Chaque utiliseur a donc ses propres contacts. (Sinon il suffirait de modifier l'entity contact de façon à ne faire figurer que des relations entre utilisateurs).
 
 
 
